@@ -96,11 +96,12 @@ From any device on the same WiFi:
 ### Basic Gameplay
 
 ```
-1. Click on the canvas to spawn your character
-2. Move using WASD, Arrow Keys, or drag mouse to control direction
-3. Your trail claims territory behind you
-4. Complete loops to lock in territory
-5. Crash into enemies to eliminate them!
+1. Enter your nickname and click the "Join" button
+2. You spawn automatically in the arena
+3. Move using WASD, Arrow Keys, or drag mouse to control direction
+4. Your trail claims territory behind you
+5. Complete loops to lock in territory
+6. Crash into enemies to eliminate them!
 ```
 
 ### Multiple Control Methods
@@ -130,8 +131,8 @@ You can control your character using **any** of these methods:
 
 **Respawn & Protection:**
 - 🛡️ **Spawn Protection**: 3 sec invulnerability after respawn (visual pulsing rings)
-- ⏱️ **Respawn Delay**: 2 sec countdown before you respawn
-- 📍 **Safe Spawn**: Algorithm finds spawn location ≥95 units from other players
+- ⏱️ **Auto Respawn**: 2 sec countdown, then you automatically respawn (no clicking needed)
+- 📍 **Safe Spawn Location**: Algorithm finds spawn ≥95 units from other players
 - 💀 **Territory Loss**: ALL your territory reverts to neutral when eliminated
 - **Grace Period**: 12 trail points behind you are "safe" (can escape tight spots)
 
@@ -192,7 +193,7 @@ const PORT = 8005;                   // Or set via process.env.PORT
 | ⬅️ **WASD Keys** | Move in four directions |
 | ⬅️ **Arrow Keys** | Directional movement (same as WASD) |
 | 🖱️ **Mouse/Touch Drag** | Drag to move character (dead zone: 3px, max radius: 34px) |
-| 🖱️ **Click on Canvas** | Spawn/respawn your character |
+
 | ⌨️ **F Key** | Toggle fullscreen mode |
 | **Multiple Keys** | Combine for diagonal movement (e.g., W+D for up-right)
 
@@ -270,8 +271,9 @@ const PORT = 8005;                   // Or set via process.env.PORT
 - **Use LAN**: Wired connection from host = best stability
 
 ### ❌ No input response
-- **Click to spawn first**: You must click canvas before moving
-- **Multiple input methods**: Try arrow keys if WASD not working, or try mouse drag
+- **Join first**: Make sure you clicked "Join" button (form closes when joined)
+- **Check connection**: Server may not have started. Is `node server.js` running?
+- **Try different input**: Arrow keys if WASD not working, or try mouse drag
 - **Fullscreen mode**: Press F if stuck in weird UI state
 - **Refresh page**: Reload browser tab if stuck
 
