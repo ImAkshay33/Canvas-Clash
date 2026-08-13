@@ -4,7 +4,7 @@ const os = require("os");
 const path = require("path");
 const fs = require("fs");
 
-const PORT = Number(globalThis.PAPER_LAN_PORT || (typeof process !== "undefined" && process.env.PORT) || 3000);
+const PORT = Number(globalThis.PAPER_LAN_PORT || (typeof process !== "undefined" && process.env.PORT) || 8005);
 const PUBLIC_DIR = path.join(__dirname, "public");
 
 const TICK_RATE = 30;
