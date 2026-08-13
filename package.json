@@ -1,0 +1,10 @@
+{
+  "name": "paperio-lan",
+  "version": "0.1.0",
+  "private": true,
+  "description": "LAN-first territory game inspired by Paper.io, served from one host laptop to browsers on the same Wi-Fi.",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

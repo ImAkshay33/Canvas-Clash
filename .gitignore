@@ -1,0 +1,7 @@
+node_modules/
+*.log
+progress.md
+test-actions.json
+web_game_playwright_client.mjs
+.agents/
+.DS_Store
